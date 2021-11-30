@@ -1,0 +1,84 @@
+---
+layout: default
+---
+
+<div class="posts">
+  <h1>What is libwifi?</h1>
+  <div class="entry">
+      <a href="https://github.com/libwifi/libwifi">libwifi</a> is a fast, simple C shared library with a
+      <a href="https://www.apache.org/licenses/LICENSE-2.0">permissive license</a> for generating and parsing a wide variety
+      of <a href="https://en.wikipedia.org/wiki/IEEE_802.11#Layer_2_%E2%80%93_Datagrams">802.11 wireless frames</a>
+      on Linux with a few lines of straight forward code.
+      <br/><br/>
+      It is written with a simple-to-use approach while also exposing features that allow
+      more advanced use, with clean and readable code being a priority.
+      <br/><br/>
+      Other goals of the library include cross-architecture support, clean compilation without
+      warnings and strict error checking.
+  </div>
+
+  <h1>How do I use it?</h1>
+  <div class="entry">
+      libwifi exposes functions and structs to make a task very easy, and examples can be found in the
+      source <a href="https://github.com/libwifi/libwifi/tree/main/examples">examples</a> directory.
+      <br/><br/>
+      When compiling, be sure to pass <code>-lwifi</code> to the linker, and make sure that the libwifi shared library
+      is installed.
+      <br/><br/>
+      Any supported 802.11 frame can be parsed in 2 ways:
+      <ul>
+          <li>Turning raw data into a <code>libwifi_frame</code>:<br/>
+              This step (done via <code>libwifi_get_frame()</code>) is used to transform raw bytes, such as those
+              sniffed from a monitor interface or from a pcap, into a frame with a header and body, as well as some
+              fields to help with later use (such as <a href="https://github.com/libwifi/libwifi/blob/0.0.1/src/libwifi/core/frame/frame.h#L25"><code>LIBWIFI_FLAGS_FCS_PRESENT</code></a>).
+          </li>
+          <li>Extracting more data from a <code>libwifi_frame</code>:<br/>
+              With a <code>libwifi_frame</code>, you can now extract more data from the frame header and body by using
+              one of the frame parsers, such as <code>libwifi_parse_beacon()</code>. This function will ingest a <code>libwifi_frame</code>
+              who's type and subtype is Management and Beacon respectfully, and store the data in a <a href="https://github.com/libwifi/libwifi/blob/0.0.1/src/libwifi/core/frame/management/common.h#L27"><code>libwifi_bss</code></a> struct. This makes it trivial to obtain things like the SSID, Channel, and Encryption information from a given frame.
+          </li>
+      </ul>
+  </div>
+
+  <h1>How do I build it?</h1>
+  <div class="entry">
+       The build system is implemented with <a href="https://cmake.org/">CMake</a>. To build it, clone the repository
+       and run the following commands.
+       <br/>
+       <div class="code"><code>
+$ mkdir build && cd build<br/>
+$ cmake .. -DCMAKE_BUILD_TYPE=Release<br/>
+$ make -j8<br/>
+$ sudo make install<br/>
+       </code></div>
+  </div>
+
+  <h1>How fast is it?</h1>
+  <div class="entry">
+       There is a simple benchmark for measuring Beacon parsing (including all tagged parameters) performance in the
+       <a href="https://github.com/libwifi/libwifi/tree/main/benchmark">benchmark</a> directory. Here are the results
+       when ran on an i7-1185G7 at 3.00GHz.
+       <br/>
+       <div class="code"><code>
+$ ./benchmark_beacon<br/>
+Run 1:  0.0000190 Seconds<br/>
+Run 2:  0.0000030 Seconds<br/>
+Run 3:  0.0000020 Seconds<br/>
+Run 4:  0.0000010 Seconds<br/>
+Run 5:  0.0000010 Seconds<br/>
+Run 6:  0.0000010 Seconds<br/>
+Run 7:  0.0000020 Seconds<br/>
+Run 8:  0.0000020 Seconds<br/>
+Run 9:  0.0000020 Seconds<br/>
+Run 10: 0.0000010 Seconds<br/>
+Run 11: 0.0000010 Seconds<br/>
+Run 12: 0.0000010 Seconds<br/>
+        </code></div>
+  </div>
+
+  <h1>Where are the docs?</h1>
+  <div class="entry">
+      The source code for libwifi is fully documented with code comments, including diagrams for structs
+      and frame layouts where necessary.
+  </div>
+</div>
