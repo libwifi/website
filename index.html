@@ -54,6 +54,7 @@ int main(int argc, const char *argv[]) {
 }
     </pre></code></div>
     The data from the libpcap loop is then given to <code>libwifi_get_frame()</code> which checks for frame validity and type/subtype, and stores the data in a <code>struct libwifi_frame</code>.
+    <br/>
     <div class="code"><code><pre>
 void parse_packet(unsigned char *args,
                   const struct pcap_pkthdr *header,
@@ -68,6 +69,7 @@ void parse_packet(unsigned char *args,
         return;
     }
     </pre></code></div>
+    <br/>
     The <code>libwifi_frame</code> struct can then be given to one of the frame parser functions, such as <code>libwifi_parse_beacon()</code>. Since the header comment for
     <code>libwifi_parse_beacon()</code> indicates that the parsed data is stored in a <code>struct libwifi_bss</code>, we need to initalise one and pass it as a parameter.
     <br/><br/>
