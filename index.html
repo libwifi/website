@@ -23,7 +23,7 @@ layout: default
     <h2>Parsing</h2>
     The generic flow of a program using libwifi to parse frames is a loop that reads captured packets as raw data, such as with <a href="https://github.com/the-tcpdump-group/libpcap">libpcap</a> from a file or monitor interface, the parse the frame into a common datatype, then parse again to retrieve frame     specific data.
     <br/>
-    <div class="code"><pre><code>
+    <div class="code"><code><pre>
 static int got_radiotap = 0;
 
 int main(int argc, const char *argv[]) {
@@ -52,9 +52,9 @@ int main(int argc, const char *argv[]) {
     pd = pcap_dump_open(handle, PCAP_SAVEFILE);
     pcap_loop(handle, -1 /*INFINITY*/, &parse_packet, (unsigned char *) pd);
 }
-    </code></pre></div>
+    </pre></code></div>
     The data from the libpcap loop is then given to <code>libwifi_get_frame()</code> which checks for frame validity and type/subtype, and stores the data in a <code>struct libwifi_frame</code>.
-    <div class="code"><pre><code>
+    <div class="code"><code><pre>
 void parse_packet(unsigned char *args, const struct pcap_pkthdr *header, const unsigned char *packet) {
     unsigned long data_len = header->caplen;
     unsigned char *data = (unsigned char *) packet;
@@ -65,13 +65,13 @@ void parse_packet(unsigned char *args, const struct pcap_pkthdr *header, const u
         printf("[!] Error getting libwifi_frame: %d\n", ret);
         return;
     }
-    </code></pre></div>
+    </pre></code></div>
     The <code>libwifi_frame</code> struct can then be given to one of the frame parser functions, such as <code>libwifi_parse_beacon()</code>. Since the header comment for
-    <code>libwifi_parse_beacon()<code> indicates that the parsed data is stored in a <code>struct libwifi_bss</code>, we need to initalise one and pass it as a parameter.
+    <code>libwifi_parse_beacon()</code> indicates that the parsed data is stored in a <code>struct libwifi_bss</code>, we need to initalise one and pass it as a parameter.
     <br/><br/>
     We'll use the BSS struct to easily show the SSID and Channel from the sniffed beacon frame.
     <br/>
-    <div class="code"><pre><code>
+    <div class="code"><code><pre>
     if (frame.frame_control.type == TYPE_MANAGEMENT && frame.frame_control.subtype == SUBTYPE_BEACON) {
         struct libwifi_bss bss = {0};
 
@@ -84,10 +84,10 @@ void parse_packet(unsigned char *args, const struct pcap_pkthdr *header, const u
         printf("SSID: %s, Channel: %d\n", bss.ssid, bss.channel);
     }
 }
-    </code></pre></div>
+    </pre></code></div>
     <h2>Generation</h2>
     For frame generation, you only need to provide the required data to one of the frame generation functions. In this example, <code>libwifi_create_beacon()</code>.
-    <div class="code"><pre><code>
+    <div class="code"><code><pre>
 int main(int argc, char **argv) {
     struct libwifi_beacon beacon = {0};
     static unsigned char bcast[] = "\xFF\xFF\xFF\xFF\xFF\xFF";
@@ -97,10 +97,10 @@ int main(int argc, char **argv) {
     if (ret != 0) {
         return ret;
     }
-    </code></pre></div>
+    </pre></code></div>
     From here, we can use the dumper function for this frame subtype to write the beacon in raw byte format to a buffer. This can be useful for writing the
     generated frame out to a pcap file using <code>pcap_dump()</code> or transmitting from a monitor mode interface.
-    <div class="code"><pre><code>
+    <div class="code"><code><pre>
     unsigned char *buf = NULL;
     size_t buf_sz = libwifi_get_beacon_length(&beacon);
 
@@ -119,7 +119,7 @@ int main(int argc, char **argv) {
     libwifi_free_beacon(&beacon);
     free(buf);
 }
-    </code></pre></div>
+    </pre></code></div>
     </div>
 </div>
 
@@ -128,12 +128,12 @@ int main(int argc, char **argv) {
     The build system is implemented with <a href="https://cmake.org/">CMake</a>. To build it, clone the repository
     and run the following commands.
     <br/>
-    <div class="code"><pre><code>
+    <div class="code"><code><pre>
 $ mkdir build && cd build
 $ cmake .. -DCMAKE_BUILD_TYPE=Release
 $ make -j8
 $ sudo make install
-    </code></pre></div>
+    </pre></code></div>
 </div>
 
 <h1>How fast is it?</h1>
@@ -142,7 +142,7 @@ $ sudo make install
     <a href="https://github.com/libwifi/libwifi/tree/main/benchmark">benchmark</a> directory. Here are the results
     when ran on an i7-1185G7 at 3.00GHz.
     <br/>
-    <div class="code"><pre><code>
+    <div class="code"><code><pre>
 $ ./benchmark_beacon
 Run 1:  0.0000190 Seconds
 Run 2:  0.0000030 Seconds
@@ -156,7 +156,7 @@ Run 9:  0.0000020 Seconds
 Run 10: 0.0000010 Seconds
 Run 11: 0.0000010 Seconds
 Run 12: 0.0000010 Seconds
-    </code></pre></div>
+    </pre></code></div>
     </div>
 
 <h1>Where are the docs?</h1>
