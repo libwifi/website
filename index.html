@@ -69,7 +69,6 @@ void parse_packet(unsigned char *args,
         return;
     }
     </pre></code></div>
-    <br/>
     The <code>libwifi_frame</code> struct can then be given to one of the frame parser functions, such as <code>libwifi_parse_beacon()</code>. Since the header comment for
     <code>libwifi_parse_beacon()</code> indicates that the parsed data is stored in a <code>struct libwifi_bss</code>, we need to initalise one and pass it as a parameter.
     <br/><br/>
