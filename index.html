@@ -5,8 +5,8 @@ layout: default
 <div class="posts">
     <h1>What is libwifi?</h1>
     <div class="entry">
-        <a href="https://github.com/libwifi/libwifi">libwifi</a> is a fast, simple C shared library with a
-        <a href="https://www.apache.org/licenses/LICENSE-2.0">permissive license</a> for generating and parsing a wide variety of <a href="https://en.wikipedia.org/wiki/IEEE_802.11#Layer_2_%E2%80%93_Datagrams">802.11 wireless frames</a> on Linux with a few lines of straight forward code.
+        <a href="https://github.com/libwifi/libwifi" target="_blank">libwifi</a> is a fast, simple C shared library with a
+        <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank">permissive license</a> for generating and parsing a wide variety of <a href="https://en.wikipedia.org/wiki/IEEE_802.11#Layer_2_%E2%80%93_Datagrams" target="_blank">802.11 wireless frames</a> on Linux with a few lines of straight forward code.
         <br/><br/>
         It is written with a simple-to-use approach while also exposing features that allow more advanced use, with clean and readable code being a priority.
         <br/><br/>
@@ -15,13 +15,13 @@ layout: default
 
     <h1>How do I use it?</h1>
     <div class="entry">
-    libwifi exposes functions and structs to make parsing and generating WiFi frames very easy, and examples can be found in the source <a href="https://github.com/libwifi/libwifi/tree/main/examples">examples</a> directory.
+    libwifi exposes functions and structs to make parsing and generating WiFi frames very easy, and examples can be found in the source <a href="https://github.com/libwifi/libwifi/tree/main/examples" target="_blank">examples</a> directory.
     <br/><br/>
     When using libwifi, be sure to pass <code>-lwifi</code> to the linker, and make sure that the libwifi shared library is installed on the system.
     <br/>
 
     <h2>Parsing</h2>
-    The generic flow of a program using libwifi to parse frames is a loop that reads captured packets as raw data, such as with <a href="https://github.com/the-tcpdump-group/libpcap">libpcap</a> from a file or monitor interface, then parse the frame into a common datatype, then parse again to retrieve frame     specific data.
+    The generic flow of a program using libwifi to parse frames is a loop that reads captured packets as raw data, such as with <a href="https://github.com/the-tcpdump-group/libpcap" target="_blank">libpcap</a> from a file or monitor interface, then parse the frame into a common datatype, then parse again to retrieve frame     specific data.
     <br/>
     <div class="code"><code><pre>
 static int got_radiotap = 0;
@@ -129,7 +129,7 @@ int main(int argc, char **argv) {
 
 <h1>How do I build it?</h1>
 <div class="entry">
-    The build system is implemented with <a href="https://cmake.org/">CMake</a>. To build it, clone the repository
+    The build system is implemented with <a href="https://cmake.org/" target="_blank">CMake</a>. To build it, clone the repository
     and run the following commands.
     <br/>
     <div class="code"><code><pre>
@@ -143,7 +143,7 @@ $ sudo make install
 <h1>How fast is it?</h1>
 <div class="entry">
     There is a simple benchmark for measuring basic Beacon parsing performance in the
-    <a href="https://github.com/libwifi/libwifi/tree/main/benchmark">benchmark</a> directory. Here are the results
+    <a href="https://github.com/libwifi/libwifi/tree/main/benchmark" target="_blank">benchmark</a> directory. Here are the results
     when ran on an i7-1185G7 at 3.00GHz.
     <br/>
     <div class="code"><code><pre>
@@ -166,5 +166,5 @@ Run 12: 0.0000010 Seconds
 <h1>Where are the docs?</h1>
 <div class="entry">
     The source code for libwifi is fully documented with code comments, including diagrams for structs
-    and frame layouts where necessary.
+    and frame layouts where necessary. You can also view the generated docs <a href="https://libwifi.so/docs" target="_blank">here</a>.
 </div>
