@@ -21,7 +21,7 @@ layout: default
     <br/>
 
     <h2>Parsing</h2>
-    The generic flow of a program using libwifi to parse frames is a loop that reads captured packets as raw data, such as with <a href="https://github.com/the-tcpdump-group/libpcap">libpcap</a> from a file or monitor interface, the parse the frame into a common datatype, then parse again to retrieve frame     specific data.
+    The generic flow of a program using libwifi to parse frames is a loop that reads captured packets as raw data, such as with <a href="https://github.com/the-tcpdump-group/libpcap">libpcap</a> from a file or monitor interface, then parse the frame into a common datatype, then parse again to retrieve frame     specific data.
     <br/>
     <div class="code"><code><pre>
 static int got_radiotap = 0;
