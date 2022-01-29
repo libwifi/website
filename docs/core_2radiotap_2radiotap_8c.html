@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>libwifi: libwifi/src/libwifi/core/radiotap/radiotap.c File Reference</title>
+<title>libwifi: libwifi/core/radiotap/radiotap.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -99,16 +99,64 @@ Functions</h2></td></tr>
 <tr class="memitem:aae6c1c0ff9812ed32f14ca1ca315a54f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="platform_8h.html#a3472d8cdbb788d5f1815b3522595bc49">EXPORT</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_2radiotap_2radiotap_8c.html#aae6c1c0ff9812ed32f14ca1ca315a54f">ieee80211_radiotap_iterator_init</a> (struct <a class="el" href="structieee80211__radiotap__iterator.html">ieee80211_radiotap_iterator</a> *iterator, struct <a class="el" href="structieee80211__radiotap__header.html">ieee80211_radiotap_header</a> *radiotap_header, int max_length, const struct <a class="el" href="structieee80211__radiotap__vendor__namespaces.html">ieee80211_radiotap_vendor_namespaces</a> *vns)</td></tr>
 <tr class="memdesc:aae6c1c0ff9812ed32f14ca1ca315a54f"><td class="mdescLeft">&#160;</td><td class="mdescRight">ieee80211_radiotap_iterator_init - radiotap parser iterator initialization @iterator: radiotap_iterator to initialize @radiotap_header: radiotap header to parse @max_length: total length we can parse into (eg, whole packet length)  <a href="core_2radiotap_2radiotap_8c.html#aae6c1c0ff9812ed32f14ca1ca315a54f">More...</a><br /></td></tr>
 <tr class="separator:aae6c1c0ff9812ed32f14ca1ca315a54f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5049f05bec53da21806a45d1c1b93301"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_2radiotap_2radiotap_8c.html#a5049f05bec53da21806a45d1c1b93301">find_ns</a> (struct <a class="el" href="structieee80211__radiotap__iterator.html">ieee80211_radiotap_iterator</a> *iterator, uint32_t <a class="el" href="core_2misc_2security_8h.html#aac7520636fd1fb014683185c68890314">oui</a>, uint8_t subns)</td></tr>
+<tr class="separator:a5049f05bec53da21806a45d1c1b93301"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa5ccd88bbe802df24507b0a44388ae74"><td class="memItemLeft" align="right" valign="top"><a class="el" href="platform_8h.html#a3472d8cdbb788d5f1815b3522595bc49">EXPORT</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_2radiotap_2radiotap_8c.html#aa5ccd88bbe802df24507b0a44388ae74">ieee80211_radiotap_iterator_next</a> (struct <a class="el" href="structieee80211__radiotap__iterator.html">ieee80211_radiotap_iterator</a> *iterator)</td></tr>
 <tr class="memdesc:aa5ccd88bbe802df24507b0a44388ae74"><td class="mdescLeft">&#160;</td><td class="mdescRight">ieee80211_radiotap_iterator_next - return next radiotap parser iterator arg @iterator: radiotap_iterator to move to next arg (if any)  <a href="core_2radiotap_2radiotap_8c.html#aa5ccd88bbe802df24507b0a44388ae74">More...</a><br /></td></tr>
 <tr class="separator:aa5ccd88bbe802df24507b0a44388ae74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
+<tr class="memitem:aa0ea84f99b5eb2e323bc1eb9eac952a2"><td class="memItemLeft" align="right" valign="top">static const struct <a class="el" href="structradiotap__align__size.html">radiotap_align_size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_2radiotap_2radiotap_8c.html#aa0ea84f99b5eb2e323bc1eb9eac952a2">rtap_namespace_sizes</a> []</td></tr>
+<tr class="separator:aa0ea84f99b5eb2e323bc1eb9eac952a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a60a7b2bde28d726d17f95d064db176da"><td class="memItemLeft" align="right" valign="top">const struct <a class="el" href="structieee80211__radiotap__namespace.html">ieee80211_radiotap_namespace</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_2radiotap_2radiotap_8c.html#a60a7b2bde28d726d17f95d064db176da">radiotap_ns</a></td></tr>
 <tr class="separator:a60a7b2bde28d726d17f95d064db176da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a5049f05bec53da21806a45d1c1b93301" name="a5049f05bec53da21806a45d1c1b93301"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5049f05bec53da21806a45d1c1b93301">&#9670;&nbsp;</a></span>find_ns()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void find_ns </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structieee80211__radiotap__iterator.html">ieee80211_radiotap_iterator</a> *&#160;</td>
+          <td class="paramname"><em>iterator</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>oui</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>subns</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="core_2radiotap_2radiotap_8c_source.html#l00253">253</a> of file <a class="el" href="core_2radiotap_2radiotap_8c_source.html">radiotap.c</a>.</p>
+
+</div>
+</div>
 <a id="aae6c1c0ff9812ed32f14ca1ca315a54f" name="aae6c1c0ff9812ed32f14ca1ca315a54f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aae6c1c0ff9812ed32f14ca1ca315a54f">&#9670;&nbsp;</a></span>ieee80211_radiotap_iterator_init()</h2>
 
@@ -197,11 +245,36 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    .n_bits = <span class="keyword">sizeof</span>(rtap_namespace_sizes) / <span class="keyword">sizeof</span>(rtap_namespace_sizes[0]),</div>
-<div class="line">    .align_size = rtap_namespace_sizes,</div>
+<div class="line">    .n_bits = <span class="keyword">sizeof</span>(<a class="code hl_variable" href="core_2radiotap_2radiotap_8c.html#aa0ea84f99b5eb2e323bc1eb9eac952a2">rtap_namespace_sizes</a>) / <span class="keyword">sizeof</span>(<a class="code hl_variable" href="core_2radiotap_2radiotap_8c.html#aa0ea84f99b5eb2e323bc1eb9eac952a2">rtap_namespace_sizes</a>[0]),</div>
+<div class="line">    .align_size = <a class="code hl_variable" href="core_2radiotap_2radiotap_8c.html#aa0ea84f99b5eb2e323bc1eb9eac952a2">rtap_namespace_sizes</a>,</div>
 <div class="line">}</div>
+<div class="ttc" id="acore_2radiotap_2radiotap_8c_html_aa0ea84f99b5eb2e323bc1eb9eac952a2"><div class="ttname"><a href="core_2radiotap_2radiotap_8c.html#aa0ea84f99b5eb2e323bc1eb9eac952a2">rtap_namespace_sizes</a></div><div class="ttdeci">static const struct radiotap_align_size rtap_namespace_sizes[]</div><div class="ttdef"><b>Definition:</b> <a href="core_2radiotap_2radiotap_8c_source.html#l00019">radiotap.c:19</a></div></div>
 </div><!-- fragment -->
 <p class="definition">Definition at line <a class="el" href="core_2radiotap_2radiotap_8c_source.html#l00135">135</a> of file <a class="el" href="core_2radiotap_2radiotap_8c_source.html">radiotap.c</a>.</p>
+
+</div>
+</div>
+<a id="aa0ea84f99b5eb2e323bc1eb9eac952a2" name="aa0ea84f99b5eb2e323bc1eb9eac952a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0ea84f99b5eb2e323bc1eb9eac952a2">&#9670;&nbsp;</a></span>rtap_namespace_sizes</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const struct <a class="el" href="structradiotap__align__size.html">radiotap_align_size</a> rtap_namespace_sizes[]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="core_2radiotap_2radiotap_8c_source.html#l00019">19</a> of file <a class="el" href="core_2radiotap_2radiotap_8c_source.html">radiotap.c</a>.</p>
 
 </div>
 </div>
@@ -210,7 +283,7 @@ Variables</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_f3a718b6ab6949145bc840fb2ee38255.html">libwifi</a></li><li class="navelem"><a class="el" href="dir_c42557e37e45350d6dfc804e67f61b86.html">src</a></li><li class="navelem"><a class="el" href="dir_a2de4624f71685afccadf203aa4d2aa9.html">libwifi</a></li><li class="navelem"><a class="el" href="dir_ff53830946f39cad109e42b747727d0d.html">core</a></li><li class="navelem"><a class="el" href="dir_8e3981771fc770b5dff1ee87fd21e189.html">radiotap</a></li><li class="navelem"><a class="el" href="core_2radiotap_2radiotap_8c.html">radiotap.c</a></li>
+    <li class="navelem"><a class="el" href="dir_a2de4624f71685afccadf203aa4d2aa9.html">libwifi</a></li><li class="navelem"><a class="el" href="dir_ff53830946f39cad109e42b747727d0d.html">core</a></li><li class="navelem"><a class="el" href="dir_8e3981771fc770b5dff1ee87fd21e189.html">radiotap</a></li><li class="navelem"><a class="el" href="core_2radiotap_2radiotap_8c.html">radiotap.c</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>

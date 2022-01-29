@@ -25,6 +25,11 @@
 var NAVTREE =
 [
   [ "libwifi", "index.html", [
+    [ "libwifi Documentation", "index.html", [
+      [ "Viewing the Code", "index.html#autotoc_md1", null ],
+      [ "Navigating the Docs", "index.html#autotoc_md2", null ],
+      [ "Making Changes", "index.html#autotoc_md3", null ]
+    ] ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
       [ "Data Structure Index", "classes.html", null ],
@@ -50,13 +55,13 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "action_8c.html",
-"core_2misc_2security_8h.html#a3d9a626cca488d77daf472098200f1f0",
-"core_8h.html#aca5017da7ece92216a727f8b386031b7",
-"gen_2management_2assoc__request_8h_source.html",
-"parse_2management_2reassoc__request_8h_source.html",
-"structlibwifi__qos__control.html#a4d1950f16d91e0901157eb7b6163a05f",
-"tag_8h.html#aab2ea29f601f7c1491003ac4fc320448a7ef27d8a28b2f9a6fb8a9e71801473b6",
-"types_8h.html#a5edecb0320f27e00c061ce8cd071f8ddacb726647ffdee06a0096692262f3500b"
+"core_2misc_2security_8h.html#a38afd612f0dc70d784a43abf9a6a5c6c",
+"core_8h.html#a12e2ab1ef91f02800c737ae841e6a147",
+"gen_2management_2assoc__request_8h.html#a07523fa5f6f707bcad0a418aaaec259a",
+"parse_2management_2probe__response_8c_source.html",
+"structlibwifi__probe__resp__fixed__parameters.html",
+"tag_8h.html#aab2ea29f601f7c1491003ac4fc320448a702296724c703e2f9dd746b66bcb5380",
+"types_8h.html#a5edecb0320f27e00c061ce8cd071f8ddab965b35874f39acd13f2b6aee314c5a8"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>libwifi: libwifi/src/libwifi/core/frame/management/common.h Source File</title>
+<title>libwifi: libwifi/core/frame/management/common.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -149,7 +149,7 @@ $(document).ready(function(){initNavTree('core_2frame_2management_2common_8h_sou
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment"> * the user application to avoid memory leaks. This function provides an easy wrapper for any</span></div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="comment"> * libwifi allocations made.</span></div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="comment"> */</span></div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> libwifi_free_bss(<span class="keyword">struct</span> <a class="code hl_struct" href="structlibwifi__bss.html">libwifi_bss</a> *bss) {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="core_2frame_2management_2common_8h.html#a22ab4daf7d2bb096ac2d759ca6ef507f">   64</a></span><span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="core_2frame_2management_2common_8h.html#a22ab4daf7d2bb096ac2d759ca6ef507f">libwifi_free_bss</a>(<span class="keyword">struct</span> <a class="code hl_struct" href="structlibwifi__bss.html">libwifi_bss</a> *bss) {</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    free(bss-&gt;<a class="code hl_variable" href="structlibwifi__bss.html#a13614e02fd49dc44345c6ec9e49520b3">tags</a>.<a class="code hl_variable" href="structlibwifi__tagged__parameters.html#a01d4045f27081ce043aef97a6a35213b">parameters</a>);</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>}</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
@@ -182,11 +182,13 @@ $(document).ready(function(){initNavTree('core_2frame_2management_2common_8h_sou
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="comment"> * the user application to avoid memory leaks. This function provides an easy wrapper for any</span></div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="comment"> * libwifi allocations made.</span></div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="comment"> */</span></div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> libwifi_free_sta(<span class="keyword">struct</span> <a class="code hl_struct" href="structlibwifi__sta.html">libwifi_sta</a> *sta) {</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="core_2frame_2management_2common_8h.html#a657efa103ae0176e00bd489e795c2f09">   97</a></span><span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="core_2frame_2management_2common_8h.html#a657efa103ae0176e00bd489e795c2f09">libwifi_free_sta</a>(<span class="keyword">struct</span> <a class="code hl_struct" href="structlibwifi__sta.html">libwifi_sta</a> *sta) {</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    free(sta-&gt;<a class="code hl_variable" href="structlibwifi__sta.html#a13614e02fd49dc44345c6ec9e49520b3">tags</a>.<a class="code hl_variable" href="structlibwifi__tagged__parameters.html#a01d4045f27081ce043aef97a6a35213b">parameters</a>);</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>}</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="preprocessor">#endif </span><span class="comment">/* LIBWIFI_CORE_COMMON_H */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="acore_2frame_2management_2common_8h_html_a22ab4daf7d2bb096ac2d759ca6ef507f"><div class="ttname"><a href="core_2frame_2management_2common_8h.html#a22ab4daf7d2bb096ac2d759ca6ef507f">libwifi_free_bss</a></div><div class="ttdeci">static void libwifi_free_bss(struct libwifi_bss *bss)</div><div class="ttdef"><b>Definition:</b> <a href="core_2frame_2management_2common_8h_source.html#l00064">common.h:64</a></div></div>
+<div class="ttc" id="acore_2frame_2management_2common_8h_html_a657efa103ae0176e00bd489e795c2f09"><div class="ttname"><a href="core_2frame_2management_2common_8h.html#a657efa103ae0176e00bd489e795c2f09">libwifi_free_sta</a></div><div class="ttdeci">static void libwifi_free_sta(struct libwifi_sta *sta)</div><div class="ttdef"><b>Definition:</b> <a href="core_2frame_2management_2common_8h_source.html#l00097">common.h:97</a></div></div>
 <div class="ttc" id="astructlibwifi__bss_html"><div class="ttname"><a href="structlibwifi__bss.html">libwifi_bss</a></div><div class="ttdef"><b>Definition:</b> <a href="core_2frame_2management_2common_8h_source.html#l00044">common.h:44</a></div></div>
 <div class="ttc" id="astructlibwifi__bss_html_a041a029872615d7e1f8c575ed6434ec6"><div class="ttname"><a href="structlibwifi__bss.html#a041a029872615d7e1f8c575ed6434ec6">libwifi_bss::hidden</a></div><div class="ttdeci">int8_t hidden</div><div class="ttdef"><b>Definition:</b> <a href="core_2frame_2management_2common_8h_source.html#l00049">common.h:49</a></div></div>
 <div class="ttc" id="astructlibwifi__bss_html_a13614e02fd49dc44345c6ec9e49520b3"><div class="ttname"><a href="structlibwifi__bss.html#a13614e02fd49dc44345c6ec9e49520b3">libwifi_bss::tags</a></div><div class="ttdeci">struct libwifi_tagged_parameters tags</div><div class="ttdef"><b>Definition:</b> <a href="core_2frame_2management_2common_8h_source.html#l00056">common.h:56</a></div></div>
@@ -218,7 +220,7 @@ $(document).ready(function(){initNavTree('core_2frame_2management_2common_8h_sou
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_f3a718b6ab6949145bc840fb2ee38255.html">libwifi</a></li><li class="navelem"><a class="el" href="dir_c42557e37e45350d6dfc804e67f61b86.html">src</a></li><li class="navelem"><a class="el" href="dir_a2de4624f71685afccadf203aa4d2aa9.html">libwifi</a></li><li class="navelem"><a class="el" href="dir_ff53830946f39cad109e42b747727d0d.html">core</a></li><li class="navelem"><a class="el" href="dir_72e18ea9fb8a1f103c3d95373a044ad9.html">frame</a></li><li class="navelem"><a class="el" href="dir_7e8660162865d79e530edd1fc203228a.html">management</a></li><li class="navelem"><a class="el" href="core_2frame_2management_2common_8h.html">common.h</a></li>
+    <li class="navelem"><a class="el" href="dir_a2de4624f71685afccadf203aa4d2aa9.html">libwifi</a></li><li class="navelem"><a class="el" href="dir_ff53830946f39cad109e42b747727d0d.html">core</a></li><li class="navelem"><a class="el" href="dir_72e18ea9fb8a1f103c3d95373a044ad9.html">frame</a></li><li class="navelem"><a class="el" href="dir_7e8660162865d79e530edd1fc203228a.html">management</a></li><li class="navelem"><a class="el" href="core_2frame_2management_2common_8h.html">common.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>

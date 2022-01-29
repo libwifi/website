@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>libwifi: libwifi/src/libwifi/core/frame/management/common.h File Reference</title>
+<title>libwifi: libwifi/core/frame/management/common.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -85,7 +85,8 @@ $(document).ready(function(){initNavTree('core_2frame_2management_2common_8h.htm
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Data Structures</a> &#124;
-<a href="#define-members">Macros</a>  </div>
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">common.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
@@ -109,6 +110,13 @@ Macros</h2></td></tr>
 <tr class="separator:a185be6653d9e1e5a63cd0fac584827aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad4860a11eeac8217001fdb2a9cc1bfe3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_2frame_2management_2common_8h.html#ad4860a11eeac8217001fdb2a9cc1bfe3">LIBWIFI_STA</a>&#160;&#160;&#160;1</td></tr>
 <tr class="separator:ad4860a11eeac8217001fdb2a9cc1bfe3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a22ab4daf7d2bb096ac2d759ca6ef507f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_2frame_2management_2common_8h.html#a22ab4daf7d2bb096ac2d759ca6ef507f">libwifi_free_bss</a> (struct <a class="el" href="structlibwifi__bss.html">libwifi_bss</a> *bss)</td></tr>
+<tr class="separator:a22ab4daf7d2bb096ac2d759ca6ef507f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a657efa103ae0176e00bd489e795c2f09"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_2frame_2management_2common_8h.html#a657efa103ae0176e00bd489e795c2f09">libwifi_free_sta</a> (struct <a class="el" href="structlibwifi__sta.html">libwifi_sta</a> *sta)</td></tr>
+<tr class="separator:a657efa103ae0176e00bd489e795c2f09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a185be6653d9e1e5a63cd0fac584827aa" name="a185be6653d9e1e5a63cd0fac584827aa"></a>
@@ -143,12 +151,69 @@ Macros</h2></td></tr>
 
 </div>
 </div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a22ab4daf7d2bb096ac2d759ca6ef507f" name="a22ab4daf7d2bb096ac2d759ca6ef507f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22ab4daf7d2bb096ac2d759ca6ef507f">&#9670;&nbsp;</a></span>libwifi_free_bss()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void libwifi_free_bss </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structlibwifi__bss.html">libwifi_bss</a> *&#160;</td>
+          <td class="paramname"><em>bss</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="core_2frame_2management_2common_8h_source.html#l00064">64</a> of file <a class="el" href="core_2frame_2management_2common_8h_source.html">common.h</a>.</p>
+
+</div>
+</div>
+<a id="a657efa103ae0176e00bd489e795c2f09" name="a657efa103ae0176e00bd489e795c2f09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a657efa103ae0176e00bd489e795c2f09">&#9670;&nbsp;</a></span>libwifi_free_sta()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void libwifi_free_sta </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structlibwifi__sta.html">libwifi_sta</a> *&#160;</td>
+          <td class="paramname"><em>sta</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="core_2frame_2management_2common_8h_source.html#l00097">97</a> of file <a class="el" href="core_2frame_2management_2common_8h_source.html">common.h</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_f3a718b6ab6949145bc840fb2ee38255.html">libwifi</a></li><li class="navelem"><a class="el" href="dir_c42557e37e45350d6dfc804e67f61b86.html">src</a></li><li class="navelem"><a class="el" href="dir_a2de4624f71685afccadf203aa4d2aa9.html">libwifi</a></li><li class="navelem"><a class="el" href="dir_ff53830946f39cad109e42b747727d0d.html">core</a></li><li class="navelem"><a class="el" href="dir_72e18ea9fb8a1f103c3d95373a044ad9.html">frame</a></li><li class="navelem"><a class="el" href="dir_7e8660162865d79e530edd1fc203228a.html">management</a></li><li class="navelem"><a class="el" href="core_2frame_2management_2common_8h.html">common.h</a></li>
+    <li class="navelem"><a class="el" href="dir_a2de4624f71685afccadf203aa4d2aa9.html">libwifi</a></li><li class="navelem"><a class="el" href="dir_ff53830946f39cad109e42b747727d0d.html">core</a></li><li class="navelem"><a class="el" href="dir_72e18ea9fb8a1f103c3d95373a044ad9.html">frame</a></li><li class="navelem"><a class="el" href="dir_7e8660162865d79e530edd1fc203228a.html">management</a></li><li class="navelem"><a class="el" href="core_2frame_2management_2common_8h.html">common.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>

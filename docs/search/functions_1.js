@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['ieee80211_5fradiotap_5fiterator_5finit_0',['ieee80211_radiotap_iterator_init',['../core_2radiotap_2radiotap_8c.html#aae6c1c0ff9812ed32f14ca1ca315a54f',1,'ieee80211_radiotap_iterator_init(struct ieee80211_radiotap_iterator *iterator, struct ieee80211_radiotap_header *radiotap_header, int max_length, const struct ieee80211_radiotap_vendor_namespaces *vns):&#160;radiotap.c'],['../radiotap__iter_8h.html#ac8da55543b2d0ecc635ffd53b16035f4',1,'ieee80211_radiotap_iterator_init(struct ieee80211_radiotap_iterator *iterator, struct ieee80211_radiotap_header *radiotap_header, int max_length, const struct ieee80211_radiotap_vendor_namespaces *vns):&#160;radiotap.c']]],
-  ['ieee80211_5fradiotap_5fiterator_5fnext_1',['ieee80211_radiotap_iterator_next',['../core_2radiotap_2radiotap_8c.html#aa5ccd88bbe802df24507b0a44388ae74',1,'ieee80211_radiotap_iterator_next(struct ieee80211_radiotap_iterator *iterator):&#160;radiotap.c'],['../radiotap__iter_8h.html#afba4575aa9116c3f54ff68bd1c93e42d',1,'ieee80211_radiotap_iterator_next(struct ieee80211_radiotap_iterator *iterator):&#160;radiotap.c']]]
+  ['find_5fns_0',['find_ns',['../core_2radiotap_2radiotap_8c.html#a5049f05bec53da21806a45d1c1b93301',1,'radiotap.c']]]
 ];
