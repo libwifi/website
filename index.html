@@ -55,7 +55,9 @@ int main(int argc, const char *argv[]) {
     </pre></code></div>
     The data from the libpcap loop is then given to <code>libwifi_get_frame()</code> which checks for frame validity and type/subtype, and stores the data in a <code>struct libwifi_frame</code>.
     <div class="code"><code><pre>
-void parse_packet(unsigned char *args, const struct pcap_pkthdr *header, const unsigned char *packet) {
+void parse_packet(unsigned char *args,
+                  const struct pcap_pkthdr *header,
+                  const unsigned char *packet) {
     unsigned long data_len = header->caplen;
     unsigned char *data = (unsigned char *) packet;
 
@@ -72,7 +74,8 @@ void parse_packet(unsigned char *args, const struct pcap_pkthdr *header, const u
     We'll use the BSS struct to easily show the SSID and Channel from the sniffed beacon frame.
     <br/>
     <div class="code"><code><pre>
-    if (frame.frame_control.type == TYPE_MANAGEMENT && frame.frame_control.subtype == SUBTYPE_BEACON) {
+    if (frame.frame_control.type == TYPE_MANAGEMENT &&
+        frame.frame_control.subtype == SUBTYPE_BEACON) {
         struct libwifi_bss bss = {0};
 
         int ret = libwifi_parse_beacon(&bss, &frame);
