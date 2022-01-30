@@ -95,9 +95,9 @@ void parse_packet(unsigned char *args,
 int main(int argc, char **argv) {
     struct libwifi_beacon beacon = {0};
     static unsigned char bcast[] = "\xFF\xFF\xFF\xFF\xFF\xFF";
-    static unsigned char transmitter = "\x00\x20\x91\xAA\xBB\CC";
+    static unsigned char tx[] = "\x00\x20\x91\xAA\xBB\CC";
 
-    int ret = libwifi_create_beacon(&beacon, bcast, txmac, txmac, "wifi-beacon", 11);
+    int ret = libwifi_create_beacon(&beacon, bcast, tx, tx, "wifi-beacon", 11);
     if (ret != 0) {
         return ret;
     }
